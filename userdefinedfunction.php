@@ -1,5 +1,5 @@
 <?php
-/*
+
 function add($a, $b) {
     $add = $a + $b;
     return $add;   
@@ -7,7 +7,7 @@ function add($a, $b) {
 
 $result = add(10, 20);  
 echo "Sum = $result";
-*/
+
 $a="hello";
 echo strlen($a); 
 ?>

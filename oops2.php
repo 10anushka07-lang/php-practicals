@@ -5,18 +5,15 @@ class riddhi {
         echo "I am riddhi(parent class)<br>";
     }
 }
-
 class anushka extends riddhi {
     function display() {
         echo "I am anushka(child class)<br>";
     }
 }
-
 // Interface Example
 interface A {
     function test();
 }
-
 class B implements A {
     function test() {
         echo "I am test function<br>";

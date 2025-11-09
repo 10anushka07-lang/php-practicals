@@ -1,0 +1,17 @@
+<?php
+$hostname = "localhost";
+$user = "root";
+$pass = "AIK081$78";
+$conn = new mysqli($hostname, $user, $pass);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "CREATE DATABASE myDatabase";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully!";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+$conn->close();
+?>
