@@ -9,11 +9,11 @@ foreach($_COOKIE as $key =>$value){
     echo"{$key}={$value}<Br>";
 }
 if(isset($_COOKIE["favourite_food"])){
-    echo"ANUSHKA'S FAVOURITE FOOD IS  {$_COOKIE["favourite_food"]}";
+    echo"AAYUSH'S FAVOURITE FOOD IS  {$_COOKIE["favourite_food"]}";
 }
 
 else{
-    echo"I DON'T KNOW ANUSHKA'S FAVOURITE FOOD";
+    echo"I DON'T KNOW AAYUSH'S FAVOURITE FOOD";
 }
 
 

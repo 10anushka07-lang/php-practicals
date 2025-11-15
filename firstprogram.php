@@ -8,7 +8,7 @@ echo".<br>";
 echo"operator=+<br>";
 echo"$";
 
-$b = "Anushka";
+$b = "Aayush";
 
 $c = "$a$b";
 

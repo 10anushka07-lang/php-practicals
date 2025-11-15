@@ -24,7 +24,7 @@ echo "<br>After array_splice():<br>";
 foreach($colors as $c){
     echo "$c<br>";
 }
-$person = ["Anushka", 18, "Delhi"];
+$person = ["Aayush", 20, "Delhi"];
 list($name, $age, $city) = $person;
 echo "Using list():<br>";
 echo "Name: $name<br>";

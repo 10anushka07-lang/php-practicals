@@ -19,13 +19,11 @@ $students = array(
     "Nishita" => "01491482024",
     "Manya Goyal" => "01501482024",
     "Anjali" => "01511482024",
-    "Dhruv Gupta" => "01521482024",
-    "Daksh saini" => "01531482024",
+    
     "Agrima Rawat" => "01911102024",
     "Deepika" => "00311102024",
     "Sanskriti Bhatia" => "02611102024",
-    "Aayush" => "00611102024",
-    "Rohan" => "02411102024",
+    
     
 );
 
