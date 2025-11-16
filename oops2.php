@@ -1,13 +1,13 @@
 <?php
 // Inheritance Example
-class aayush {
+class sanskriti {
     function show() {
-        echo "I am aayush(parent class)<br>";
+        echo "I am sanskriti(parent class)<br>";
     }
 }
-class tanuj extends aayush {
+class deepika extends sanskriti {
     function display() {
-        echo "I am tanuj(child class)<br>";
+        echo "I am deepika(child class)<br>";
     }
 }
 // Interface Example
@@ -21,7 +21,7 @@ class B implements A {
 }
 
 // Objects
-$obj1 = new tanuj();
+$obj1 = new deepika();
 $obj1->show();
 $obj1->display();
 

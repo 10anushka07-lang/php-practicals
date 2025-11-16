@@ -1,35 +1,37 @@
-<html>
- <head>
- </head>
- <body>
- <?php
- echo "<br> Before <br>";
- include 'practicalno27.php';
- function execute($conn,$query){
- mysqli_query($conn,$query);
- }
- function delete($conn){
- $query="delete from student council where ID='6'";
- execute_($conn,$query);
- }
- function modify($conn){
- $query="update studentcouncil set name='deepika' where ID='8'";
- execute_($conn,$query);
- }
- function add($conn){
- $query="insert into studentcouncil values (18, 'art club coordinator', 'nishita', 'commercewithmaths')";
- execute_($conn,$query);
- }
- $host="localhost";
- $user="root";
- $pass="AIK081$78";
- $db="classof2024";
- $conn=mysqli_connect($host,$user,$pass,$db);
+<?php
+$hostname = "localhost";
+$username = "root";
+$password = "AIK081$78";
+$dbname   = "test";
 
- delete($conn);
- modify($conn);
- add($conn);
- echo "<br> After <br><br>";
- include 'practicalno27.php';
- ?>
- </body>
+$conn = new mysqli($hostname, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+function runQuery($conn, $sql) {
+    if ($conn->query($sql) === TRUE) {
+        // Convert newlines \n in $sql to <br> in HTML and escape special HTML chars
+        echo "Query succeeded:<br>" . nl2br(htmlspecialchars($sql)) . "<br><br>";
+    } else {
+        echo "Error running query: " . nl2br(htmlspecialchars($conn->error)) . "<br>";
+    }
+}
+
+// SQL statements, each ending with \n so nl2br will break them
+$sqlAdd = "ALTER TABLE users2 ADD COLUMN phone VARCHAR(50)\n";
+runQuery($conn, $sqlAdd);
+
+$sqlModify = "ALTER TABLE users2 MODIFY COLUMN phone VARCHAR(100) NOT NULL\n";
+runQuery($conn, $sqlModify);
+
+$sqlChange = "ALTER TABLE users2 CHANGE COLUMN phone contact_number VARCHAR(100) NOT NULL\n";
+runQuery($conn, $sqlChange);
+
+$sqlDrop = "ALTER TABLE users2 DROP COLUMN contact_number\n";
+runQuery($conn, $sqlDrop);
+
+$sqlDropTable = "DROP TABLE IF EXISTS users2\n";
+runQuery($conn, $sqlDropTable);
+
+$conn->close();
